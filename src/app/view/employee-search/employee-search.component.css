@@ -1,0 +1,16 @@
+.search-result{
+	position: absolute;
+    background: #f5ebeb99;
+    padding-left: 30px;    
+    width: 206px;
+}
+
+.search-result li > a{
+ 	color: #dc3232;
+ 	display: inline-block;
+    width: 100%;
+}
+
+.search-result li > a:hover{
+	color: #363636;
+}

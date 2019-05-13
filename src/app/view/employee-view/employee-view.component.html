@@ -1,0 +1,160 @@
+<p>
+  New Employee {{this.employeeForm.get('name').value | uppercase  }}
+</p>
+<form [formGroup]="employeeForm" id="ngForm" (ngSubmit)="onSubmit()">	
+<div class="columns init">
+	
+	  	<div class="column">
+			<div class="columns">
+				<div class="column">
+					<label>Name:</label>
+				</div>
+				<div class="column">
+					<mat-form-field>
+						<input matInput type="text"  formControlName="name">
+					</mat-form-field>
+					
+				</div>
+				<div class="column">
+				</div>
+			</div>  		
+
+			<div class="columns">
+				<div class="column">
+					<label>Dob:</label>
+				</div>
+				<div class="column">
+					<mat-form-field>
+					  	<input matInput formControlName="date_born" [matDatepicker]="date_born" placeholder="Choose a date" [max]="maxDate" >
+					  	<mat-datepicker-toggle matSuffix [for]="date_born"></mat-datepicker-toggle>
+					  	<mat-datepicker #date_born></mat-datepicker>
+					</mat-form-field>
+				</div>
+				<div class="column">
+				</div>
+			</div>
+
+			<div class="columns">
+
+				<div class="column">
+					<label>Country:</label>
+				</div>
+
+				<div class="column">
+					<mat-form-field>
+					  <mat-label>Countries</mat-label>
+					  <select matNativeControl formControlName="country" >
+					    <option *ngFor="let item of countries" value="{{item.id}}">
+					    	{{item.name}}
+					    </option>					    
+					  </select>
+					</mat-form-field>
+				</div>
+
+				<div class="column">
+				</div>
+				
+			</div>
+
+			<div class="columns">
+				<div class="column">
+					<label>User Name:</label>
+				</div>
+				<div class="column">
+					<mat-form-field>
+						<input matInput type="text"  formControlName="user_name">
+					</mat-form-field>
+					
+				</div>
+				<div class="column">
+				</div>
+			</div>
+
+			
+
+			<div class="columns">
+				<div class="column">
+					<label>status:</label>
+				</div>
+				<div class="column">
+					<mat-slide-toggle formControlName="status"></mat-slide-toggle>					
+				</div>
+				<div class="column">
+				</div>
+			</div>
+
+			
+
+	  	</div>
+
+	  	<div class="column">
+	  		<div class="columns">
+				<div class="column">
+					<label>Hire Date:</label>
+				</div>
+				<div class="column">
+					<mat-form-field>
+					  	<input matInput formControlName="date_hire" [matDatepicker]="date_hire" placeholder="Choose a date" >
+					  	<mat-datepicker-toggle matSuffix [for]="date_hire"></mat-datepicker-toggle>
+					  	<mat-datepicker #date_hire></mat-datepicker>
+					</mat-form-field>
+				</div>
+				<div class="column">
+				</div>
+			</div>
+
+		    <div class="columns">
+				<div class="column">
+					<label>Area:</label>
+				</div>
+				<div class="column">
+					<!-- <mat-button-toggle-group formControlName="area" name="fontStyle" (change)="appChild.dofilter($event)"> -->
+					<mat-button-toggle-group formControlName="area" name="fontStyle">	
+					  <mat-button-toggle value="1">Services</mat-button-toggle>
+					  <mat-button-toggle value="2">Kitchen</mat-button-toggle>					  
+					</mat-button-toggle-group>
+				</div>
+				<div class="column">
+				</div>
+			</div>
+
+			<div class="columns">
+				<div class="column"></div>
+				<div class="column">
+					<app-jobtittledropdown [employeeForm]="employeeForm" [jobtittles]="jobtittles"></app-jobtittledropdown>
+				</div>
+				<div class="column"></div>				
+			</div>
+
+			<div class="columns">
+				<div class="column">
+					<label>Tip Rate:</label>
+				</div>
+				<div class="column">
+					<mat-form-field>
+						<input matInput type="number"  formControlName="tip_rate">
+					</mat-form-field>
+					
+				</div>
+				<div class="column">
+				</div>
+			</div>
+
+		</div>
+
+	  	<div class="column">
+	  		<p>Messages Form</p>
+	    	<p>
+		  		Form Status: {{ employeeForm.status }}		  		
+			</p>
+	  	</div>
+  	
+</div>
+</form>
+<div>
+	<a class="" routerLink="" style="margin-right: 10px">
+		<mat-icon>keyboard_arrow_left</mat-icon>
+		<span>Back</span>
+	</a>
+	<button type="submit" (click)="onEdit()">To edit</button>
+</div>

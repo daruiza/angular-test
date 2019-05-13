@@ -1,0 +1,24 @@
+.video-container{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	top: 0px;
+	z-index: -100; 
+	opacity: 0.09;
+}
+
+.video-container video {
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+@media screen and (max-width: 767px) {
+	.video-container{
+		display: none;
+	}
+}

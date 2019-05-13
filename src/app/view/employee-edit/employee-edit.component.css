@@ -1,0 +1,24 @@
+.columns.init{
+	margin-top: 15px;
+}
+
+.column label{
+	width: 100%;
+}
+
+a{
+	color:#dc3232;
+}
+a:hover {
+    color: #363636;
+}
+
+.form-status-true,
+.form-status-INVALID{
+	color: #dc3232;
+}
+
+.form-status-false,
+.form-status-VALID{
+	color: #32dc55;
+}

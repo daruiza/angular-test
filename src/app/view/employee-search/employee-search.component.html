@@ -1,0 +1,13 @@
+<div id="search-component">
+  
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Search a employee" value="" #searchBox id="search-box" (input)="search(searchBox.value)">
+  </mat-form-field>
+  <ul class="search-result">
+    <li *ngFor="let employee of employees$ | async" >
+      <a routerLink="/employeeview/{{employee.id}}">
+        {{employee.name}}
+      </a>
+    </li>
+  </ul>
+</div>

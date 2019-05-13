@@ -1,0 +1,44 @@
+table {
+  width: 100%;
+  background-color: transparent;  
+}
+th,td{
+	text-align: center !important;
+	vertical-align: middle !important; 
+}
+
+td.mat-cell:first-of-type,
+td.mat-cell:last-of-type{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+mat-icon a{
+	color:#dc3232;
+}
+mat-icon a:hover {
+    color: #363636;
+}
+
+@media screen and (min-width: 768px) {
+	th{
+		font-size: 18px !important;
+	}
+
+	.mat-icon{
+	    margin-right: 10px;
+	}
+}
+
+@media screen and (max-width: 767px){
+	.mat-column-date_born,
+	.mat-column-user_name,
+	.mat-column-date_hire{
+		display: none;	
+	}
+
+	.mat-icon{
+	    margin-right: 10px;
+	}
+}
+

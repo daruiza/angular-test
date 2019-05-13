@@ -1,0 +1,27 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" routerLink="">
+      <img src="{{logo}}" width="112" height="28">
+    </a>
+
+    <a (click)="toggleNavbar()" role="button" #navBurger class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasic" class="navbar-menu" #navMenu>
+    <div class="navbar-start">
+      <a class="navbar-item" routerLink="">
+        Employee List
+      </a>
+
+      <a class="navbar-item" routerLink="/employeenew">
+        New Employee
+      </a>
+      
+    </div>
+  </div>
+
+</nav>
